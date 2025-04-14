@@ -592,33 +592,53 @@ export default function SpanishProjectSite() {
           </motion.div>
 
           {/* Made by Section */}
+          {/* Made by Section */}
           <motion.div
             className="md:col-span-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <Card className="shadow-xl bg-indigo-800/90 backdrop-blur rounded-2xl">
+            <Card className="shadow-xl bg-white/80 backdrop-blur rounded-2xl">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-semibold text-white mb-4 text-center">
-                  Made By
+                <h2 className="text-2xl font-bold text-purple-800 mb-4 text-center">
+                  Project Team
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {[
-                    { name: "Tanish Maheshwari", id: "22BIT0013" },
-                    { name: "Adheesh Dubey", id: "22BIT0035" },
-                    { name: "Yagya Mohan", id: "22BIT0133" },
-                    { name: "Eishani Purohit", id: "22BIT0362" },
+                    {
+                      name: "Tanish Maheshwari",
+                      id: "22BIT0013",
+                      role: "Tech Lead",
+                    },
+                    {
+                      name: "Adheesh Dubey",
+                      id: "22BIT0035",
+                      role: "Tech Lead",
+                    },
+                    {
+                      name: "Yagya Mohan",
+                      id: "22BIT0133",
+                      role: "Language specialization",
+                    },
+                    {
+                      name: "Eishani Purohit",
+                      id: "22BIT0362",
+                      role: "Language specialization",
+                    },
                   ].map((member, index) => (
                     <motion.div
                       key={index}
                       whileHover={{ scale: 1.05 }}
-                      className="bg-white/20 rounded-lg p-4 text-center"
+                      className="bg-gradient-to-br from-red-100 to-yellow-100 rounded-lg p-4 text-center shadow-md"
                     >
-                      <p className="font-bold text-lg text-white">
+                      <p className="font-bold text-lg text-purple-700">
                         {member.name}
                       </p>
-                      <p className="text-yellow-200">{member.id}</p>
+                      <p className="text-gray-600">{member.id}</p>
+                      <p className="mt-2 text-pink-600 font-medium">
+                        {member.role}
+                      </p>
                     </motion.div>
                   ))}
                 </div>
