@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
-import { Calendar } from "./components/ui/calendar"; // This re-exports react-calendar
+import { Calendar } from "./components/ui/calendar";
 import { Volume2, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import axios from "axios";
@@ -130,13 +130,11 @@ const playAudio = (words) => {
   playSequentially(0);
 };
 
-// Function to play a specific audio file
 const playSingleAudio = (filename) => {
   const audio = new Audio(`/audio/${filename}`);
   audio.play();
 };
 
-// numberToWords: Returns an array of Spanish words for numbers up to 9999.
 const numberToWords = (num) => {
   const base = {
     0: "cero",
@@ -234,7 +232,6 @@ const numberToWords = (num) => {
   }
 };
 
-// Slideshow component - with increased height
 const Slideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 5;
@@ -247,7 +244,6 @@ const Slideshow = () => {
     setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
 
-  // Auto advance slides every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
@@ -322,7 +318,6 @@ export default function SpanishProjectSite() {
     });
   }, []);
 
-  // Spanish mapping for days and months.
   const spanishDays = {
     Monday: "lunes",
     Tuesday: "martes",
@@ -348,11 +343,8 @@ export default function SpanishProjectSite() {
     December: "diciembre",
   };
 
-  // --- "Fecha Actual" Card ---
-  // English text remains unchanged.
   const englishToday = dayjs().format("dddd, MMMM D, YYYY");
 
-  // For the "Fecha Actual" card, use the current date (not the selected date)
   const currentDate = new Date();
   const currentDayOfWeek = dayjs(currentDate).format("dddd");
   const currentMonthOfYear = dayjs(currentDate).format("MMMM");
@@ -378,7 +370,6 @@ export default function SpanishProjectSite() {
     ...translatedCurrentYearNumber,
   ];
 
-  // --- "Clima Actual" Card ---
   const temperatureText = weather?.temperature?.toFixed(0);
   const temperatureWords = numberToWords(parseInt(temperatureText || "0"));
   const translatedWeather = [
@@ -390,8 +381,6 @@ export default function SpanishProjectSite() {
     "centígrados",
   ];
 
-  // --- "Selecciona una Fecha" Card ---
-  // This card uses the selected date
   const selectedDayOfWeek = dayjs(date).format("dddd");
   const selectedMonthOfYear = dayjs(date).format("MMMM");
   const selectedDayNumber = parseInt(dayjs(date).format("D"));
@@ -418,24 +407,18 @@ export default function SpanishProjectSite() {
 
   const season = getSeason(dayjs(date).month() + 1);
 
-  // Handle click on the main heading to play 2025.mp3
-  const handleHeadingClick = () => {
-    // playSingleAudio("2025_ee.mp3");
-  };
+  const handleHeadingClick = () => {};
 
   return (
     <div className="relative min-h-screen font-sans">
-      {/* Background image overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
           backgroundImage: "url('https://source.unsplash.com/1600x900/?spain')",
         }}
       />
-      {/* Color overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-red-500 via-orange-400 to-yellow-400 opacity-60" />
 
-      {/* Main content container */}
       <div className="relative z-10 p-10">
         <motion.h1
           className="text-4xl font-bold text-center mb-10 text-purple-800 cursor-pointer"
@@ -447,7 +430,6 @@ export default function SpanishProjectSite() {
         </motion.h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Fecha Actual Card */}
           <motion.div
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300 }}
@@ -457,9 +439,7 @@ export default function SpanishProjectSite() {
                 <h2 className="text-2xl font-semibold text-purple-700">
                   Fecha Actual
                 </h2>
-                {/* English date remains unchanged */}
                 <p className="text-lg mt-2">{englishToday}</p>
-                {/* The Spanish translation now uses current date, not selected date */}
                 <p className="text-lg italic text-pink-700 mt-2">
                   {translatedActualDate.map((word, i) => (
                     <span key={i} className="mr-1">
@@ -477,7 +457,6 @@ export default function SpanishProjectSite() {
             </Card>
           </motion.div>
 
-          {/* Clima Actual Card */}
           <motion.div
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300 }}
@@ -511,7 +490,6 @@ export default function SpanishProjectSite() {
             </Card>
           </motion.div>
 
-          {/* Selecciona una Fecha Card with Calendar and Slideshow */}
           <motion.div
             className="md:col-span-2"
             whileHover={{ scale: 1.03 }}
@@ -524,7 +502,6 @@ export default function SpanishProjectSite() {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Left side - Calendar */}
                   <div>
                     <div className="flex justify-center">
                       <Calendar
@@ -580,7 +557,6 @@ export default function SpanishProjectSite() {
                     </div>
                   </div>
 
-                  {/* Right side - Slideshow */}
                   <div className="flex items-center justify-center">
                     <div className="w-full h-96">
                       <Slideshow />
@@ -591,8 +567,6 @@ export default function SpanishProjectSite() {
             </Card>
           </motion.div>
 
-          {/* Made by Section */}
-          {/* Made by Section */}
           <motion.div
             className="md:col-span-2"
             initial={{ opacity: 0, y: 20 }}
