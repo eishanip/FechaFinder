@@ -590,6 +590,41 @@ export default function SpanishProjectSite() {
               </CardContent>
             </Card>
           </motion.div>
+
+          {/* Made by Section */}
+          <motion.div
+            className="md:col-span-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <Card className="shadow-xl bg-indigo-800/90 backdrop-blur rounded-2xl">
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-semibold text-white mb-4 text-center">
+                  Made By
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {[
+                    { name: "Tanish Maheshwari", id: "22BIT0013" },
+                    { name: "Adheesh Dubey", id: "22BIT0035" },
+                    { name: "Yagya Mohan", id: "22BIT0133" },
+                    { name: "Eishani Purohit", id: "22BIT0362" },
+                  ].map((member, index) => (
+                    <motion.div
+                      key={index}
+                      whileHover={{ scale: 1.05 }}
+                      className="bg-white/20 rounded-lg p-4 text-center"
+                    >
+                      <p className="font-bold text-lg text-white">
+                        {member.name}
+                      </p>
+                      <p className="text-yellow-200">{member.id}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </div>
