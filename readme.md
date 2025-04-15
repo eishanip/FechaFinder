@@ -100,8 +100,8 @@ Weather data is obtained using the Open-Meteo API, which provides temperature in
 
 - **Tanish Maheshwari** (22BIT0013)
 - **Adheesh Dubey** (22BIT0035)
-- **Yagya Mohan** (22BIT0)
-- **Eishani Purohit** (22BIT)
+- **Yagya Mohan** (22BIT0133)
+- **Eishani Purohit** (22BIT0362)
 
 ## License
 
