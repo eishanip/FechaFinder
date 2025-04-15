@@ -1,6 +1,6 @@
 # Spanish Language Learning Project: Date, Weather, and Seasons
 
-![Spanish Project Screenshot](https://source.unsplash.com/800x400/?spain)
+![Spanish Project Screenshot](https://i.ibb.co/C3K0TtML/logo.jpg)
 
 ## Overview
 
