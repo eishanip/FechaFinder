@@ -101,6 +101,7 @@ const availableAudioWords = [
   "setecientos",
   "trescientos",
   "fecha",
+  "ahora",
 ];
 
 const wordAudios = Object.fromEntries(
@@ -363,6 +364,7 @@ export default function SpanishProjectSite() {
     "es",
     "el",
     translatedCurrentDayOfWeek,
+    "el",
     ...translatedCurrentDayNumber,
     "de",
     translatedCurrentMonthOfYear,
@@ -375,7 +377,9 @@ export default function SpanishProjectSite() {
   const translatedWeather = [
     "la",
     "temperatura",
+    "ahora",
     "es",
+    "de",
     ...temperatureWords,
     "grados",
     "centígrados",
@@ -552,7 +556,7 @@ export default function SpanishProjectSite() {
                         }
                         className="mt-2 bg-pink-500 hover:bg-pink-600"
                       >
-                        <Volume2 className="mr-2" /> Escuchar Estación
+                        <Volume2 className="mr-2" /> Escuchar
                       </Button>
                     </div>
                   </div>
