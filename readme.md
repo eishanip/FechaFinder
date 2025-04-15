@@ -1,6 +1,6 @@
 # Spanish Language Learning Project: Date, Weather, and Seasons
 
-![Spanish Project Screenshot](https://ibb.co/v64zKBQ9)
+![Spanish Project Screenshot](https://spanish-website.onrender.com/images/logo.jpg)
 
 ## Overview
 
@@ -24,6 +24,11 @@ An interactive Spanish language learning application that helps users learn voca
 - **Axios**: Promise-based HTTP client for API requests
 - **Open-Meteo API**: Weather data integration
 - **React-Calendar**: Calendar component for date selection
+
+## Live Website
+
+The website is currently deployed on -
+https://spanish-website.onrender.com/
 
 ## Installation
 
