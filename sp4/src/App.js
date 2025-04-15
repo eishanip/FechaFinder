@@ -364,6 +364,7 @@ export default function SpanishProjectSite() {
     "es",
     "el",
     translatedCurrentDayOfWeek,
+    ",",
     "el",
     ...translatedCurrentDayNumber,
     "de",
@@ -587,22 +588,22 @@ export default function SpanishProjectSite() {
                     {
                       name: "Tanish Maheshwari",
                       id: "22BIT0013",
-                      role: "Tech Lead",
+                      role: "Frontend Developer",
                     },
                     {
                       name: "Adheesh Dubey",
                       id: "22BIT0035",
-                      role: "Tech Lead",
+                      role: "UI/UX Designer",
                     },
                     {
                       name: "Yagya Mohan",
                       id: "22BIT0133",
-                      role: "Language specialization",
+                      role: "Language Specialisation",
                     },
                     {
                       name: "Eishani Purohit",
                       id: "22BIT0362",
-                      role: "Language specialization",
+                      role: "Language Specialisation",
                     },
                   ].map((member, index) => (
                     <motion.div
