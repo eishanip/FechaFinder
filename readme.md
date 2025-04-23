@@ -35,13 +35,13 @@ https://spanish-website.onrender.com/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/spanish-project.git
+   git clone https://github.com/eishanip/FechaFinder.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd spanish-project
+   cd FechaFinder
    ```
 
 3. Install dependencies:
@@ -69,7 +69,7 @@ https://spanish-website.onrender.com/
 ## Project Structure
 
 ```
-spanish-project/
+FechaFinder/
 ├── components/
 │   └── ui/               # UI components (calendar, cards, buttons)
 ├── public/
@@ -95,7 +95,7 @@ The audio playback system sequentially plays word-by-word pronunciations to help
 
 ## Spanish Number Translation
 
-The application includes a comprehensive system for translating numbers into Spanish words, supporting values up to 9999, following Spanish numerical grammar rules.
+The application includes a comprehensive system for translating numbers into Spanish words, supporting values up to 9999, and following Spanish numerical grammar rules.
 
 ## Weather Integration
 
@@ -115,5 +115,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 - Special thanks to our Spanish language professor for guidance
-- Audio pronunciations recorded by native Spanish speakers
+- Audio pronunciations recorded by team members themselves
 - Images sourced from Unsplash
